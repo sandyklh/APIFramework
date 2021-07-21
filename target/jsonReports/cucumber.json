@@ -1,0 +1,139 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-07-02T05:44:54.788Z",
+        "line": 13,
+        "name": "Verify if place is Being Successfully added using AddPlaceAPI",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-place-is-being-successfully-added-using-addplaceapi;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1290000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Add Place  Payload with \"Manali\" and \"English\" and \"Word Trade Centre\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Manali\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 37
+                },
+                {
+                  "val": "\"Word Trade Centre\"",
+                  "offset": 51
+                }
+              ],
+              "location": "StepDefination.stepDefination.add_place_payload_with_and_and(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1706000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user calls \"AddPlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceAPI\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 30
+                }
+              ],
+              "location": "StepDefination.stepDefination.user_calls_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 42
+                }
+              ],
+              "location": "StepDefination.stepDefination.the_api_call_got_success_with_status_code(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 878000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in resposne body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "StepDefination.stepDefination.status_in_resposne_body_is_ok(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2437000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "verify place_id created maps to \"Manali\" using  \"GetPlaceAPI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Manali\"",
+                  "offset": 32
+                },
+                {
+                  "val": "\"GetPlaceAPI\"",
+                  "offset": 48
+                }
+              ],
+              "location": "StepDefination.stepDefination.verify_place_id_created_maps_to_using(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Addplace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating Place API\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/placeValidation.feature",
+    "tags": []
+  }
+]
